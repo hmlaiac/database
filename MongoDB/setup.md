@@ -19,6 +19,31 @@ db.createUser({
   });
 ```
 
+- 1.4 Create SuperUser for specific Database
+```
+db.createUser({ 
+      user: "user1",
+      pwd: "user1password",
+      roles: [ 
+                { role: "userAdminAnyDatabase", db: "admin" }, 
+                { role: "readWriteAnyDatabase", db: "admin" }, 
+                { role: "dbAdminAnyDatabase",   db: "admin" } 
+             ] 
+  });
+```
+
+- 1.5 Create User for specific Database
+```
+db.createUser(
+{
+user: 'username',
+pwd: 'password',
+roles: [{role: 'readWrite', db: 'safio'}]
+}
+);
+
+```
+
 ## 2. Enable MongoDB Auth
 - 2.1 Modify Configuration of Database
 ```
@@ -55,3 +80,13 @@ ubuntu:~$ mongo -u user1 -p user1password 127.0.0.1/sampledb
 - Different Cloud platforms may have different configurations
 - Please set up your configurations depending on your platforms
 
+## 4. Mongo Compass Connections
+- mongodb://username:password@ip_address:port
+
+## References:
+- Install MongoDB on Debian:
+- https://linuxize.com/post/how-to-install-mongodb-on-debian-10/
+- Create account and network connection
+- https://medium.com/founding-ithaka/setting-up-and-connecting-to-a-remote-mongodb-database-5df754a4da89
+- MongoDB Open network tutorial
+- https://docs.mongodb.com/manual/reference/connection-string/
