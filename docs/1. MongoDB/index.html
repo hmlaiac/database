@@ -1,0 +1,361 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1. MongoDB · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="A1. Linux Installation/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1. MongoDB
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="A1. Linux Installation/">
+            
+                <a href="A1. Linux Installation/">
+            
+                    
+                    A1. Linux Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="A3. Advance Commands/">
+            
+                <a href="A3. Advance Commands/">
+            
+                    
+                    A3. Advance Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="A4. Handle Errors/">
+            
+                <a href="A4. Handle Errors/">
+            
+                    
+                    A4. Handle Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../postgreDB/">
+            
+                <a href="../postgreDB/">
+            
+                    
+                    postgreDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >1. MongoDB</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="introduction">Introduction</h1>
+<p>MongoDB is a popular open-source <code>document-oriented database system</code>. It is designed to store and
+manage <code>unstructured data</code>
+in the form of documents, which are similar to <code>JSON objects</code>. MongoDB is known for its flexible data model, horizontal
+scalability, and ease of use.</p>
+<h1 id="mongodb-vs-sql-database">MongoDB VS SQL Database</h1>
+<h2 id="advantages-of-mongodb">Advantages of MongoDB</h2>
+<ol>
+<li>Data Model: MongoDB is a document-oriented database, which means that data is stored in a more flexible and dynamic
+way
+compared to traditional SQL databases, which are based on a rigid table structure. In MongoDB, data is stored in
+collections of documents, which are similar to JSON objects and can have varying structures. In contrast, SQL
+databases
+use tables with a <code>fixed schema</code>, where each row has the <code>same set of columns</code>.</li>
+<li>Query Language: MongoDB uses a query language called MongoDB Query Language <code>(MQL)</code>, which is based on <code>JSON</code> and
+allows
+for more flexible and expressive queries. SQL databases, on the other hand, use SQL (Structured Query Language),
+which is more rigid and requires a predefined schema.</li>
+<li>Scalability: MongoDB is designed to <code>scale horizontally</code>, which means that it can easily handle large datasets by
+distributing them across multiple servers. Traditional SQL databases, on the other hand, are designed to scale
+vertically, which means that they rely on adding more resources to a single server.</li>
+<li>Performance: MongoDB can provide <code>faster performance</code> for certain types of queries, especially when dealing
+with <code>large
+datasets</code>. This is because it can use <code>indexing and other optimization techniques</code> to speed up queries. In contrast,
+traditional SQL databases may experience performance issues when dealing with complex queries or large datasets.</li>
+</ol>
+<h2 id="disadvantages-of-mongodb">Disadvantages of MongoDB</h2>
+<ol>
+<li>Transactions: MongoDB supports transactions, but with some limitations. Traditional SQL databases, on the other hand,
+have strong support for transactions and provide advanced features suchas ACID (Atomicity, Consistency, Isolation,
+and Durability) compliance, which ensures that transactions are executed reliably and with data integrity.</li>
+<li>Data Relationships: MongoDB supports data relationships between documents using a feature called document embedding
+or referencing. This allows for more flexible and efficient data modeling compared to traditional SQL databases,
+which use foreign keys to establish relationships between tables.</li>
+</ol>
+<h1 id="conclusion">Conclusion</h1>
+<p>In my points of view, MongoDB is a good choice for big data analysis and data mining due to its flexibility and easy
+migration. However, it is not a good choice for transactional data due to its lack of ACID compliance. e.g. databse of
+Salvio Environmental Monitor.</p>
+<h2 id="acid-compliance">ACID Compliance</h2>
+<ul>
+<li><p>Atomicity: This property ensures that a transaction is treated as a single, indivisible unit of work. It means that
+either all the operations in a transaction are completed successfully, or none of them are completed at all. If any
+part
+of a transaction fails, the entire transaction is rolled back to its original state.</p>
+</li>
+<li><p>Consistency: This property ensures that a transaction brings the database from one valid state to another. It means
+that
+a transaction should not violate any integrity constraints or business rules defined by the database schema. If a
+transaction violates any constraints or rules, it is rolled back to its original state.</p>
+</li>
+<li><p>Isolation: This property ensures that multiple transactions can execute concurrently without interfering with each
+other. It means that each transaction should be executed in isolation from other transactions, and the results of a
+transaction should not be visible to other transactions until it is committed.</p>
+</li>
+<li><p>Durability: This property ensures that the results of a transaction are permanent and survive system failures. It
+means
+that once a transaction is committed, its changes are saved to non-volatile storage, such as a hard disk or SSD, and
+will still be available even if the system crashes.</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: database">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="A1. Linux Installation/" class="navigation navigation-next " aria-label="Next page: A1. Linux Installation">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1. MongoDB","level":"1.2","depth":1,"next":{"title":"A1. Linux Installation","level":"1.2.1","depth":2,"path":"1. MongoDB/A1. Linux Installation/README.md","ref":"./1. MongoDB/A1. Linux Installation/README.md","articles":[]},"previous":{"title":"database","level":"1.1","depth":1,"path":"README.md","ref":"./README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"1. MongoDB/README.md","mtime":"2023-05-26T01:34:46.330Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-26T01:36:23.048Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
